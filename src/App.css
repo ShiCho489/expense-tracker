@@ -1,3 +1,13 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+    margin: 30px auto;
+    width: 350px;
+  }
+
+
 h2{
   display: flex; 
   padding: 20px;
@@ -9,10 +19,47 @@ h2{
 
 h3{
   text-align: center;
-
+  color: brown;
+  
 }
+
+
 
 #balance{
   text-align: center;
   font-size: 20px;
 }
+
+.inc-exp-container{
+  box-shadow: var(--box-shadow);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.inc-exp-container > div {
+  flex: 1;
+  text-align: center;
+}
+
+.inc-exp-container > div:first-of-type {
+  border-right: 1px solid #dedede;
+}
+
+.money {
+  font-size: 20px;
+  letter-spacing: 3px;
+  margin: 5px 0;
+}
+
+form{
+  text-align: center;
+  display: block;
+}
+
+.list{
+  text-align: center;
+}
+
+
