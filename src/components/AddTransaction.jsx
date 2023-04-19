@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import'../App.css';
+import{ Form, FormGroup, Input, Label, Button } from 'reactstrap';
 
 export const AddTransaction = () => {
 
@@ -8,20 +9,37 @@ export const AddTransaction = () => {
   return (
     <>
     <h3>Add transaction</h3>
-    <form>
-      <div className="form-control">
-        <label htmlFor="text">Text</label>
-        <input type="text" id="text" value={text} onChange={(e) => setText(e.target.value)} placeholder="Enter text..." />
-      </div>
-      <div className="form-control">
-        <label htmlFor="amount"
-          >Amount <br />
-          (negative - expense, positive - income)</label
-        >
-        <input type="number" id="amount" value={amount} onChange={(e)=> setAmount(e.target.value)} placeholder="Enter amount..." />
-      </div>
-      <button className="btn">Add transaction</button>
-    </form>
+    <Form>
+    <FormGroup floating>
+      <Input
+        id="text"
+        name="text"
+        value={text} onChange={(e)=> setText(e.target.value)}
+        placeholder="Text"
+        type="text"
+      />
+      <Label for="text">
+       Enter Text...
+      </Label>
+    </FormGroup>
+    {' '}
+    <FormGroup floating>
+      <Input
+        id="amount"
+        name="amount"
+        value={amount} onChange={(e)=> setAmount(e.target.value)}
+        placeholder="Enter amount..."
+        type="amount"
+      />
+      <Label for="amount">
+        Enter Amount... 
+        
+      </Label>
+    </FormGroup>
+    {' '}
+    <Button
+        color="primary">Add Transaction</Button>
+  </Form>
     
    </>
    
