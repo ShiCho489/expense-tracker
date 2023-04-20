@@ -8,7 +8,7 @@ export const AddTransaction = () => {
 
    const { dispatch } = useContext(GlobalContext);
 
-    const [text, setText] = useState('');
+    const [text, setText] = useState([]);
     const [amount, setAmount] = useState(0);
 
     const onSubmit = (e) => {
