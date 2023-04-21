@@ -6,20 +6,21 @@ import { v4 as uuidv4 } from 'uuid';
 
 export const AddTransaction = () => {
 
-   const { dispatch } = useContext(GlobalContext);
+   const { addTransaction } = useContext(GlobalContext);
 
-    const [text, setText] = useState([]);
+    const [text, setText] = useState('');
     const [amount, setAmount] = useState(0);
 
     const onSubmit = (e) => {
       e.preventDefault();
-      alert('text' + text + 'amount' + amount);
+      
 
-      const transaction = {
+      const newTransaction = {
         id: uuidv4(),
         text: text,
         amount: parseInt(amount),
       };
+      addTransaction (newTransaction);
     };
 
   return (
